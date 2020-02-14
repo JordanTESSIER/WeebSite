@@ -150,38 +150,19 @@
         <div class="col-lg-8 mx-auto">
           <h2 class="text-white mb-4">About Ducks...</h2>
           	<script src="js/three.js"></script>
-		<script src="GLTFLoader.js"></script>
+		<script src="js/GLTFLoader.js"></script>
 		<script>
 		var loader = new THREE.GLTFLoader();
 
-loader.load(
-	// resource URL
-	'img/Banana.glb',
-	// called when the resource is loaded
-	function ( glb ) {
+loader.load( 'img/Banana.glb', function ( gltf ) {
 
-		scene.add( glb.scene );
+	scene.add( gltf.scene );
 
-		glb.animations; // Array<THREE.AnimationClip>
-		glb.scene; // THREE.Scene
-		glb.scenes; // Array<THREE.Scene>
-		glb.cameras; // Array<THREE.Camera>
-		glb.asset; // Object
+}, undefined, function ( error ) {
 
-	},
-	// called while loading is progressing
-	function ( xhr ) {
+	console.error( error );
 
-		console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
-
-	},
-	// called when loading has errors
-	function ( error ) {
-
-		console.log( 'An error happened' );
-
-	}
-);
+} );
 			</script>
         </div>
       </div>
