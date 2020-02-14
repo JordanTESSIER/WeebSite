@@ -150,32 +150,17 @@
         <div class="col-lg-8 mx-auto">
           <h2 class="text-white mb-4">About Ducks...</h2>
           	<script src="js/three.js"></script>
-		<script>
-			var scene = new THREE.Scene();
-			var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
+		var loader = new THREE.GLTFLoader();
 
-			var renderer = new THREE.WebGLRenderer();
-			renderer.setSize( window.innerWidth, window.innerHeight );
-			document.body.appendChild( renderer.domElement );
+		loader.load( 'img/Banana.glb', function ( gltf ) {
 
-			var geometry = new THREE.BoxGeometry();
-			var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-			var cube = new THREE.Mesh( geometry, material );
-			scene.add( cube );
+		scene.add( gltf.scene );
 
-			camera.position.z = 5;
+		}, undefined, function ( error ) {
 
-			var animate = function () {
-				requestAnimationFrame( animate );
+		console.error( error );
 
-				cube.rotation.x += 0.01;
-				cube.rotation.y += 0.01;
-
-				renderer.render( scene, camera );
-			};
-
-			animate();
-		</script>
+} );
         </div>
       </div>
     </div>
