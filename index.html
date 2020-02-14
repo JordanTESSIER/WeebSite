@@ -152,11 +152,13 @@
 		<script src="js/three.js"></script>
 		<script src="js/GLTFLoader.js"></script>
 		<script>
+			var scene = new THREE.Scene();
 		var loader = new THREE.GLTFLoader();
 
 loader.load( 'img/Banana.glb', function ( gltf ) {
 
 	scene.add( gltf.scene );
+		
 
 }, undefined, function ( error ) {
 
