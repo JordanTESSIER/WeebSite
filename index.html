@@ -154,11 +154,16 @@
     <!-- Weapon Section -->
     <section id="weapon" class="weapon-section bg-light">
     <div class="container">
-        <div class="col-xl-8 col-lg-7">
-          <canvas id="c"></canvas>
-      </div>
-           <div class="featured-text text-center text-lg-left"> 
-         <h4>Secret Weapon</h4>
+        <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+         <div class="col-xl-8 col-lg-7">
+           <canvas id="c"></canvas>
+         </div>
+        <div class="col-xl-4 col-lg-5">
+          <div class="featured-text text-center text-lg-left">
+            <h4>Secret Weapon</h4>
+            <p class="text-black-50 mb-0">Duck utlimate technologie</p>
+          </div>
+        </div>
       </div>
       </div>
   </section>
@@ -356,7 +361,7 @@ function main() {
       const boxCenter = box.getCenter(new THREE.Vector3());
 
       // set the camera to frame the box
-      frameArea(boxSize * 0.2, boxSize, boxCenter, camera);
+      frameArea(boxSize * 0.8, boxSize, boxCenter, camera);
 
       // update the Trackball controls to handle the new size
       controls.maxDistance = boxSize * 10;
