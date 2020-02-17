@@ -174,7 +174,7 @@ camera.position.set(5,5,5);
 
 var renderer = new THREE.WebGLRenderer( { antialias: true } );
 renderer.setPixelRatio( window.devicePixelRatio );
-renderer.setSize( window.innerWidth, window.innerHeight );
+renderer.setSize( container.innerWidth, container.innerHeight );
 renderer.setClearColor( backgroundColor );//0x );
 
 renderer.toneMapping = THREE.LinearToneMapping;
@@ -245,9 +245,9 @@ loader.load( 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/39255/ladybug.gltf', 
 
  //   TweenMax.from( object.position, 3, {
  //     y: -8,
-   //   yoyo: true,
-  //    repeat: -1,
- //     ease: 'Power2.easeInOut'
+//     yoyo: true,
+ //    repeat: -1,
+ //    ease: 'Power2.easeInOut'
 //    });
     //object.position.y = - 95;
     scene.add( object );
