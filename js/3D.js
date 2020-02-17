@@ -86,7 +86,7 @@ function main() {
 
   {
     const gltfLoader = new GLTFLoader();
-    gltfLoader.load('resources/models/Banana.glb', (gltf) => {
+    gltfLoader.load('img/Banana.glb', (gltf) => {
       const root = gltf.scene;
       scene.add(root);
 
