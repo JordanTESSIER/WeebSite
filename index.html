@@ -23,7 +23,13 @@
   <!-- Custom styles for this template -->
 
   <link href="css/grayscale.min.css" rel="stylesheet">
-
+  <style>
+      #c {
+        width: 80%;
+        height: 80%;
+        display: block;
+    }
+    </style>
   
 </head>
 
@@ -148,6 +154,8 @@
     <!-- Weapon Section -->
     <section id="weapon" class="weapon-section bg-light">
     <div class="container">
+            
+         <h4>Secret Weapon</h4>
             <canvas id="c"></canvas>
       </div>
   </section>
@@ -265,7 +273,7 @@ function main() {
   controls.update();
 
   const scene = new THREE.Scene();
-  scene.background = new THREE.Color('white');
+  scene.background = new THREE.Color('transparent');
 
   {
     //const planeSize = 40;
@@ -306,7 +314,7 @@ function main() {
   }
 
   function frameArea(sizeToFitOnScreen, boxSize, boxCenter, camera) {
-    const halfSizeToFitOnScreen = sizeToFitOnScreen * 0.5;
+    const halfSizeToFitOnScreen = sizeToFitOnScreen * 0.4;
     const halfFovY = THREE.MathUtils.degToRad(camera.fov * .5);
     const distance = halfSizeToFitOnScreen / Math.tan(halfFovY);
     // compute a unit vector that points in the direction the camera is now
