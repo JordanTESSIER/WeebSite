@@ -174,7 +174,7 @@ camera.position.set(5,5,5);
 
 var renderer = new THREE.WebGLRenderer( { antialias: true } );
 renderer.setPixelRatio( window.devicePixelRatio );
-renderer.setSize( container.innerWidth, container.innerHeight );
+renderer.setSize( window.innerWidth, window.innerHeight );
 renderer.setClearColor( backgroundColor );//0x );
 
 renderer.toneMapping = THREE.LinearToneMapping;
@@ -231,7 +231,7 @@ scene.add( light2 );
 
 var loader = new THREE.GLTFLoader();
 loader.crossOrigin = true;
-loader.load( 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/39255/ladybug.gltf', function ( data ) {
+loader.load( 'img/Banana.gltf', function ( data ) {
 
   
     var object = data.scene;
