@@ -239,7 +239,7 @@ function main() {
 
   {
     const gltfLoader = new GLTFLoader();
-    gltfLoader.load('models/Banana.glb', (gltf) => {
+    gltfLoader.load('https://s3-us-west-2.amazonaws.com/s.cdpn.io/39255/ladybug.gltf', (gltf) => {
       const root = gltf.scene;
       scene.add(root);
 
